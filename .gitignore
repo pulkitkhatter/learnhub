@@ -1,0 +1,17 @@
+# dependencies / build output
+node_modules/
+app/build/
+app/.dart_tool/
+app/.flutter-plugins-dependencies
+.idea/
+*.iml
+.DS_Store
+
+# local data
+server/db.json
+server/db.json.tmp
+
+# AI assistant files - never commit
+.claude/
+CLAUDE.md
+.claude*
