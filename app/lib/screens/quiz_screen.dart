@@ -401,11 +401,11 @@ class _Result extends StatelessWidget {
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
     final r = quiz.result!;
-    final (emoji, headline) = switch (r.percent) {
-      100 => ('🏆', 'Perfect score!'),
-      >= 70 => ('🎉', 'Great job!'),
-      >= 40 => ('👍', 'Good effort'),
-      _ => ('📚', 'Keep practising'),
+    final (icon, headline) = switch (r.percent) {
+      100 => (Icons.emoji_events_rounded, 'Perfect score!'),
+      >= 70 => (Icons.thumb_up_alt_rounded, 'Great job!'),
+      >= 40 => (Icons.trending_up_rounded, 'Good effort'),
+      _ => (Icons.auto_stories_rounded, 'Keep practising'),
     };
 
     Widget stat(IconData icon, Color color, String value, String label) => Expanded(
@@ -437,7 +437,7 @@ class _Result extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(24),
           child: Column(children: [
-            Text(emoji, style: const TextStyle(fontSize: 44)),
+            Icon(icon, size: 48, color: scheme.primary),
             const SizedBox(height: 8),
             Text(headline,
                 style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800)),

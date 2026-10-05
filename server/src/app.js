@@ -35,7 +35,7 @@ const findCourse = (id) => {
 const summarize = (c) => ({
   id: c.id,
   title: c.title,
-  emoji: c.emoji,
+  icon: c.icon,
   level: c.level,
   summary: c.summary,
   durationMinutes: c.durationMinutes,

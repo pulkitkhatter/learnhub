@@ -71,7 +71,7 @@ class _CourseListScreenState extends State<CourseListScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Hi ${context.read<AuthController>().user?.name.split(' ').first ?? 'there'} 👋',
+                        'Welcome back, ${context.read<AuthController>().user?.name.split(' ').first ?? 'there'}',
                         style: theme.textTheme.headlineSmall
                             ?.copyWith(fontWeight: FontWeight.w800),
                       ),

@@ -7,7 +7,7 @@ module.exports = [
   {
     id: 'flutter-basics',
     title: 'Flutter Fundamentals',
-    emoji: '🦋',
+    icon: 'widgets',
     level: 'Beginner',
     durationMinutes: 90,
     summary: 'Build beautiful cross-platform UIs with widgets, layouts and state.',
@@ -58,7 +58,7 @@ module.exports = [
   {
     id: 'dart-language',
     title: 'Dart Language Essentials',
-    emoji: '🎯',
+    icon: 'code',
     level: 'Beginner',
     durationMinutes: 75,
     summary: 'Master types, null safety, collections and async programming in Dart.',
@@ -108,7 +108,7 @@ module.exports = [
   {
     id: 'web-fundamentals',
     title: 'Web Fundamentals',
-    emoji: '🌐',
+    icon: 'public',
     level: 'Beginner',
     durationMinutes: 80,
     summary: 'HTML, CSS and JavaScript — the three pillars of the web.',
@@ -158,7 +158,7 @@ module.exports = [
   {
     id: 'git-github',
     title: 'Git & GitHub Workflow',
-    emoji: '🌿',
+    icon: 'merge',
     level: 'Intermediate',
     durationMinutes: 60,
     summary: 'Version control, branching and collaboration like a professional.',
@@ -207,7 +207,7 @@ module.exports = [
   {
     id: 'rest-apis',
     title: 'REST APIs with Node.js',
-    emoji: '🚀',
+    icon: 'api',
     level: 'Intermediate',
     durationMinutes: 100,
     summary: 'Design and build secure JSON APIs with Express and JWT.',

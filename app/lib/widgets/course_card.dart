@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/course_icons.dart';
 import '../core/format.dart';
 import '../models/course.dart';
 import '../models/progress.dart';
@@ -35,7 +36,7 @@ class CourseCard extends StatelessWidget {
             children: [
               Row(children: [
                 Hero(
-                  tag: 'emoji-${course.id}',
+                  tag: 'course-icon-${course.id}',
                   child: Material(
                     color: Colors.transparent,
                     child: Container(
@@ -46,7 +47,7 @@ class CourseCard extends StatelessWidget {
                         color: scheme.primaryContainer,
                         borderRadius: BorderRadius.circular(14),
                       ),
-                      child: Text(course.emoji, style: const TextStyle(fontSize: 28)),
+                      child: Icon(courseIcon(course.icon), size: 28, color: scheme.onPrimaryContainer),
                     ),
                   ),
                 ),

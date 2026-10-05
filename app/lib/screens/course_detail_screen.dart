@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../core/api_client.dart';
+import '../core/course_icons.dart';
 import '../core/format.dart';
 import '../core/repository.dart';
 import '../models/course.dart';
@@ -84,11 +85,11 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
         bestScore: controller.progress.bestScores[course.id],
         onToggleLesson: (lesson, done) => _run(
           () => controller.setLessonCompleted(course.id, lesson.id, done),
-          success: done ? 'Lesson completed ✓' : null,
+          success: done ? 'Lesson completed' : null,
         ),
         onToggleCourse: (done) => _run(
           () => controller.setCourseCompleted(course, done),
-          success: done ? 'Course completed 🎉' : 'Course marked as not completed',
+          success: done ? 'Course completed' : 'Course marked as not completed',
         ),
         onStartQuiz: () => context.push('/course/${course.id}/quiz'),
       );
@@ -177,7 +178,7 @@ class _Header extends StatelessWidget {
     final scheme = theme.colorScheme;
     return Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Hero(
-        tag: 'emoji-${course.id}',
+        tag: 'course-icon-${course.id}',
         child: Material(
           color: Colors.transparent,
           child: Container(
@@ -186,7 +187,7 @@ class _Header extends StatelessWidget {
             alignment: Alignment.center,
             decoration: BoxDecoration(
                 color: scheme.primaryContainer, borderRadius: BorderRadius.circular(18)),
-            child: Text(course.emoji, style: const TextStyle(fontSize: 34)),
+            child: Icon(courseIcon(course.icon), size: 34, color: scheme.onPrimaryContainer),
           ),
         ),
       ),

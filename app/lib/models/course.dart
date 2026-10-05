@@ -24,7 +24,7 @@ class CourseSummary {
   const CourseSummary({
     required this.id,
     required this.title,
-    required this.emoji,
+    required this.icon,
     required this.level,
     required this.summary,
     required this.durationMinutes,
@@ -35,7 +35,7 @@ class CourseSummary {
   factory CourseSummary.fromJson(Map<String, dynamic> json) => CourseSummary(
         id: json['id'] as String,
         title: json['title'] as String,
-        emoji: json['emoji'] as String,
+        icon: json['icon'] as String,
         level: json['level'] as String,
         summary: json['summary'] as String,
         durationMinutes: json['durationMinutes'] as int,
@@ -45,7 +45,7 @@ class CourseSummary {
 
   final String id;
   final String title;
-  final String emoji;
+  final String icon;
   final String level;
   final String summary;
   final int durationMinutes;
@@ -58,7 +58,7 @@ class CourseDetail extends CourseSummary {
   const CourseDetail({
     required super.id,
     required super.title,
-    required super.emoji,
+    required super.icon,
     required super.level,
     required super.summary,
     required super.durationMinutes,
@@ -74,7 +74,7 @@ class CourseDetail extends CourseSummary {
     return CourseDetail(
       id: base.id,
       title: base.title,
-      emoji: base.emoji,
+      icon: base.icon,
       level: base.level,
       summary: base.summary,
       durationMinutes: base.durationMinutes,
